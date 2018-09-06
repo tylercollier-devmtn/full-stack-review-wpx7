@@ -21,6 +21,8 @@
   * proxy
     * remember special proxy for use with Auth0
 * middlewares?
+* db folder
+  * init.sql
 
 ## Routes
 
@@ -85,3 +87,9 @@
   * picture
   * address?
   * nickname
+
+* get_memes_by_user_id
+* get_user_by_auth0_id
+* create_user
+* delete_meme?
+* update_meme?
