@@ -88,8 +88,8 @@
   * address?
   * nickname
 
-* get_memes_by_user_id
-* get_user_by_auth0_id
-* create_user
+* ~~get_memes_by_user_id~~
+* ~~get_user_by_auth0_id~~
+* ~~create_user~~
 * delete_meme?
 * update_meme?
