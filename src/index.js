@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 // import registerServiceWorker from './registerServiceWorker';
+import { HashRouter } from 'react-router-dom';
 
 import { AppContainer } from 'react-hot-loader';
 
@@ -11,7 +12,9 @@ const render = () => {
   ReactDOM.render(
     // Wrap App inside AppContainer
     <AppContainer>
+      <HashRouter>
           <App />
+      </HashRouter>
     </AppContainer>,
     document.getElementById('root')
   );
