@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 // import registerServiceWorker from './registerServiceWorker';
 import { HashRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 import { AppContainer } from 'react-hot-loader';
 
@@ -11,11 +13,13 @@ import { AppContainer } from 'react-hot-loader';
 const render = () => {
   ReactDOM.render(
     // Wrap App inside AppContainer
-    <AppContainer>
-      <HashRouter>
+    <Provider store={store}>
+      <AppContainer>
+        <HashRouter>
           <App />
-      </HashRouter>
-    </AppContainer>,
+        </HashRouter>
+      </AppContainer>
+    </Provider>,
     document.getElementById('root')
   );
 };
