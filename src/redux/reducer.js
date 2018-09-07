@@ -10,6 +10,7 @@ const initialState = {
 
 const LOGGED_IN = 'LOGGED_IN';
 const LOGGED_OUT = 'LOGGED_OUT';
+const SET_MEMES = 'SET_MEMES';
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
@@ -19,6 +20,8 @@ export default function reducer(state = initialState, action) {
       return stateCopy;
     case LOGGED_OUT:
       return { ...state, user: null };
+    case SET_MEMES:
+      return { ...state, memesList: action.payload };
     default:
       return state;
   }
@@ -34,5 +37,12 @@ export function logIn(user) {
 export function logOut() {
   return {
     type: LOGGED_OUT,
+  };
+};
+
+export function setMemes(memesList) {
+  return {
+    type: SET_MEMES,
+    payload: memesList
   };
 };

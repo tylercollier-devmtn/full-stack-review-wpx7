@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import routes from './routes';
+import Header from './components/Header';
 
 class App extends Component {
   
@@ -14,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <button onClick={this.login}>Log in</button>
         {routes}
       </div>
